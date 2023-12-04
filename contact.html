@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      form input[type="submit"] {
+        background-color: #434a8c;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 26px;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #555;
+      }
+
+      form {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      form input[type="text"],
+      form input[type="email"],
+      form textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+      h1#name {
+        font-size: 50px;
+      }
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 30px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <nav class="row">
+      <ul id="nav" class="row">
+        <li class="col-lg-2 col-sm-2"><a href="about.html">About</a></li>
+        <li class="col-lg-2 col-sm-2"><a href="contact.html" class="active">Contact</a></li>
+        <li class="col-lg-2 col-sm-2"><a href="index.html">Home</a></li>
+        <li class="col-lg-3 col-sm-3"><a href="experience.html">Experience</a></li>
+        <li class="col-lg-2 col-sm-2"><a href="projects.html">Projects</a></li>
+      </ul>
+  </nav>
+    <h1>Contact Me</h1>
+          <li>Address :- 403, Seema Dham apt, Lane No. 2, Lohegaon, Pune, 411047 </a></li>
+          <li>Mobile Number :- +91 9881926709</li>
+          <li>Email :- sawantroshan98@gmail.com</a></li>
+          <li><a  href="https://www.linkedin.com/in/roshan-sawant-3118341b2/"><img style="width: 150px;" src="images/linkedin_logo.png" alt="LinkedIn Profile"></a></li>
+
+<hr />
+
+    <form style="font-size: 28px;"  action="mailto:sawantroshan98@gmail.com" method="post" enctype="text/plain">
+      <label>Your Name:</label>
+      <input type="Text" name="yourName" value="" /><br /><br />
+      <label>Email:</label>
+      <input type="email" name="yourEmail" value="" /><br /><br />
+      <label>Your Message:</label><br />
+      <textarea name="yourMessage" rows="10" cols="30"></textarea><br /><br />
+      <input type="Submit" name="" /><br />
+    </form>
+  </body>
+</html>

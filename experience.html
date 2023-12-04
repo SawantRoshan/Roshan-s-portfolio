@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Define styles for the articles */
+        .article {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h3, p, ul,h1 {
+            color: #fff;
+        }
+        
+
+        .article h3 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .article p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .article ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .article ul li {
+            margin-bottom: 5px;
+        }
+      
+    </style>
+</head>
+<body>
+    <nav class="row">
+        <ul id="nav" class="row">
+          <li class="col-lg-2 col-sm-2"><a href="index.html">Home</a></li>
+          <li class="col-lg-2 col-sm-2"><a href="about.html">About</a></li>
+          <li class="col-lg-2 col-sm-2"><a href="contact.html">Contact</a></li>
+          <li class="col-lg-3 col-sm-3"><a href="experience.html" class="active">Experience</a></li>
+          <li class="col-lg-2 col-sm-2"><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+    <h1>My Experience</h1>
+
+    <section>
+        <!-- Template for the first article -->
+        <template id="article-template-1">
+            <article class="article">
+                <h3></h3>
+                <p></p>
+                <ul></ul>
+                <p></p>
+            </article>
+        </template>
+
+        <!-- Template for the second article -->
+        <template id="article-template-2">
+            <article class="article">
+                <h3></h3>
+                <p></p>
+                <ul></ul>
+                <p></p>
+                <p></p>
+                <p></p>
+            </article>
+        </template>
+
+        <!-- Display the first article using the first template -->
+        <div id="article-1"></div>
+
+        <!-- Display the second article using the second template -->
+        <div id="article-2"></div>
+    </section>
+
+    <script>
+        // Get the article templates
+        const template1 = document.getElementById('article-template-1');
+        const template2 = document.getElementById('article-template-2');
+
+        // Create a new instance of the first article template
+        const article1 = document.importNode(template1.content, true);
+
+        // Fill in the content for the first article
+        const article1Heading = article1.querySelector('h3');
+        const article1Date = article1.querySelector('p');
+        const article1List = article1.querySelector('ul');
+        const article1Technologies = article1.querySelectorAll('p');
+
+        article1Heading.textContent = 'Software Developer - Simin Softsys, Pune, India';
+        article1Date.textContent = 'January 2023 - Present';
+        article1List.innerHTML = `
+            <li>Responsible for developing both front-end and back-end components of applications, ensuring their seamless integration.</li>
+            <li>Actively contributing as a full-stack developer on diverse domains, successfully participating in various phases of the Software Development Life Cycle (SDLC).</li>
+            <li>Taking responsibility for a range of tasks in SDLC, including requirement analysis, development, testing, and maintenance.</li>
+            <li>Proficiently deploying code, conducting thorough testing, and resolving bugs to ensure high-quality software deliverables.</li>
+            <li>Skillfully managing databases to ensure efficient data storage and retrieval.</li>
+        `;
+        article1Technologies[0].textContent = 'Technologies used: HTML5, CSS3, JavaScript, TypeScript, Angular, PHP, MySQL, Bootstrap';
+
+        // Append the first article to the document
+        document.getElementById('article-1').appendChild(article1);
+
+        // Create a new instance of the second article template
+        const article2 = document.importNode(template2.content, true);
+
+        // Fill in the content for the second article
+        const article2Heading = article2.querySelector('h3');
+        const article2Date = article2.querySelector('p');
+        const article2List = article2.querySelector('ul');
+        const article2Technologies = article2.querySelectorAll('p');
+
+        article2Heading.textContent = 'Software Engineer E - FIS Global, Pune, India';
+        article2Date.textContent = 'June 2021 - Present';
+        article2List.innerHTML = `
+            <li>Working as a front-end Angular developer under the Capital Market domain project named "Payment Investigation Manager."</li>
+            <li>Designing pixel-perfect, responsive UI pages and implementing functionalities as per requirements.</li>
+            <li>Writing and editing unit test cases to improve code coverage using Jasmine and Karma.</li>
+            <li>Providing input in task-sizing (grooming) and retrospection meetings.</li>
+        `;
+        article2Technologies[0].textContent = 'Technologies used: HTML, CSS, TypeScript, JavaScript, Angular';
+        article2Technologies[1].textContent = 'Tools: MS Visual Studio, Visual Studio Code';
+        article2Technologies[2].textContent = 'Methodology: Agile Scrum';
+
+        // Append the second article to the document
+        document.getElementById('article-2').appendChild(article2);
+    </script>
+</body>
+</html>
